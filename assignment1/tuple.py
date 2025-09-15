@@ -1,7 +1,7 @@
 row = int(input("Row: "))
 col = int(input("Col: "))
 
-nestedtuple = () 
+nestedtuple = ()
 
 for x in range(row):
     print(f"Row {x+1}")
@@ -9,11 +9,12 @@ for x in range(row):
     for y in range(col):
         score = int(input(f"Enter score {y+1}: "))
         innerList.append(score)
-    nestedtuple += (tuple(innerList),)  
+    nestedtuple += (tuple(innerList),)
 
-print("\nNested Tuple:")
-for z in nestedtuple:
-    print(z)
+print("\nNested Tuple (Formatted):")
+for i in range(row):
+    values = " ".join(str(v) for v in nestedtuple[i])
+    print(f"row {i+1}: {values}")
 
 search_value = int(input("\nEnter a score to search: "))
 found = False

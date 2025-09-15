@@ -8,11 +8,12 @@ for x in range(row):
     for y in range(col):
         score = int(input(f"Enter score {y+1}: "))
         innerList.append(score)
-    nestedlist.append(innerList)  
+    nestedlist.append(innerList)
 
-print("\nNested List:")
-for z in nestedlist:
-    print(z)
+print("\nNested List (Formatted):")
+for i in range(row):
+    values = " ".join(str(v) for v in nestedlist[i])
+    print(f"row {i+1}: {values}")
 
 search_value = int(input("\nEnter a score to search: "))
 found = False
